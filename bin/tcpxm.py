@@ -1,8 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-#sudo ./tcpxm.py eth0 "port 80"
+#sudo ./tcpxm.py -i eth0 -f "port 80"
 #ver: 1.0
-#jingyuan@xiaomi.com
 
 import sys
 import pcap
