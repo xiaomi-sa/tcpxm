@@ -1,0 +1,80 @@
+2012-01-05  Wim Lewis  <wiml@hhhh.org>
+
+  pylibpcap-0.6.3, 5 January 2012
+
+  * pcap_interface.c: Release the GIL when calling into libpcap,
+    to allow other threads to run. (SF bug #2080784)
+  * pcap_interface.c: Minor improvements to exception processing.
+    Fixes SF bug #1758709, probably others.
+  * mk-constants.py: Added more DLT_ values from tcpdump.org.
+  * Regenerated pcap.c and pcap.py using SWIG 1.3.31.
+
+2008-01-25  Wim Lewis  <wiml@hhhh.org>
+
+  pylibpcap-0.6.2, 25 January 2008
+
+  Some files were missing from the tarball depending on how it was
+  packaged; added them to MANIFEST.in to make sure they get included.
+  Also updated mk-constants with the latest DLT_* entries from
+  tcpdump.org.
+
+2007-07-25  Wim Lewis  <wiml@hhhh.org>
+
+  pylibpcap-0.6.1, 25 July 2007
+
+  Clarified the license terms. Rewrote some of the module initialization
+  to hopefully make it less fragile when SWIG changes. Added a bunch of
+  new DLT_* constants. Made a few changes to the syntax in pcap.i to match
+  with the current SWIG-1.3.x syntax.
+
+2007-02-14  Noah Spurrier  <noah>
+
+  pylibpcap-0.6, 2007-02-14
+
+  To install run:
+      python ./setup.py install
+
+  For Ubuntu/Debian systems you will probably need to install
+  the libpcap development package:
+     apt-get install libpcap-dev
+
+  Had to manually add SWIG_PY_INT to mk-constants.py to support
+  swig-1.3.31
+
+  Normalized indentation to Python semi-standard 4 spaces.
+
+  Changed #!/usr/bin/env lines from python2 to python, since
+  no distros use python2 anymore.
+
+2005-07-05  Wim Lewis  <wiml@hhhh.org>
+
+  pylibpcap-0.5, released 7/3/2005
+
+  This release contains the patches that have been accumulating in CVS,
+  and supports some features of newer libpcaps. It should build for
+  libpcap bersions >= 0.8.3. It can be built for earlier versions by
+  uncommenting lines in setup.py according to which features your version
+  of libpcap supports.  [wiml]
+
+2004-04-25  Wim Lewis <wiml@hhhh.org>
+
+  Apr 25, 2004 [wiml]:
+
+  There is a bug in libpcap and/or OpenBSD3.4 which results in a SEGV
+  if you call findalldevs() and you have a gif tunnel configured.
+  (See libpcap bug #941924 for details:
+    http://sourceforge.net/tracker/index.php?
+	func=detail&aid=941924&group_id=53067&atid=469577 )
+
+2002-06-14  David Margrave  <davidma@eskimo.com>
+
+  pylibpcap-0.4, released 6/14/02
+
+  Thanks to the following people who supplied patches:
+
+  - PC Drew for a fix to exception handling in callbacks.
+  - Gustavo Carneiro for various fixes to pcap_next() and to handling of
+    packet capture lengths. 
+  - Jon Nelson for distutil patch.
+  - T. Meyarivan for finding and fixing memory leaks
+

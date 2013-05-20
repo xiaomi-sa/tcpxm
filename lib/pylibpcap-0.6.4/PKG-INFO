@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: pylibpcap
+Version: 0.6.4
+Summary: pylibpcap is a python module for the libpcap packet capture library.
+Home-page: http://pylibpcap.sourceforge.net/
+Author: Wim Lewis
+Author-email: wiml@users.sourceforge.net
+License: BSD
+Description: pylibpcap is a python module for the libpcap packet capture library.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Networking :: Monitoring

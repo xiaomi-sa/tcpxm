@@ -1,0 +1,37 @@
+
+To compile, you will need the Python include files, libpcap 0.7.1 (or
+later) includes and library, as well as SWIG 1.3.12 if you wish to
+modify the interface (see http://www.swig.org for more information).
+If you do wish to modify the interface, you'll need to change 'pcap.c'
+to 'pcap.i' in the setup.py script.  Most users won't need to touch
+this however.
+
+On Ubuntu/Debian systems you can install the libpcap development
+package in order to get the headers:
+    apt-get install libpcap-dev
+
+Alternately, you can download pcap from www.tcpdump.org if it is not
+already installed on your system (or if your vendor's version is old).
+
+To build, simply run "python ./setup.py build", or "python2 ./setup.py build"
+
+You may need to edit setup.py if you are not using a recent libpcap.
+See the comments in that file for more information.
+
+To install, run "python ./setup.py install"
+
+To run the sample program 'sniff.py', specify the interface name and 
+filter expression on the command line like so:
+
+[root@linuxbox pylibpcap]# ./sniff.py eth0 tcp port 80 
+
+Please refer to the online module documentation (__doc__ attributes), and 
+the pcap man page further information
+
+David Margrave
+davidma@eskimo.com
+
+Wim Lewis
+wiml@hhhh.org
+
+

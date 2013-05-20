@@ -1,0 +1,23 @@
+Python libpcap
+Copyright (C) 2000, 2001, 2002 David Margrave
+Copyright (C) 2004, 2005, 2012 William Lewis
+Based on PY-libpcap (C) 1998, Aaron L. Rhodes
+
+This program is free software. Redistribution and use in source and
+binary forms, with or without modification, are permitted provided
+that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the
+     distribution.
+  3. The names of the authors may not be used to endorse or promote
+     products derived from this software without specific prior
+     written permission.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; it is provided "AS IS", without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+

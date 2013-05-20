@@ -1,0 +1,12 @@
+include pypcap.h
+include pypcap-int.h
+include pcap.c
+include pcap.i
+include doc.i
+include mk-constants.py
+include constants.c
+include COPYING
+include ChangeLog
+include MANIFEST.in
+recursive-include examples *
+recursive-include build-tools *.py
