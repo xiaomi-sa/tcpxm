@@ -1,1 +1,5 @@
 sftp-config.json
+bin/*.pid
+log/*.log
+*.log
+*.pid

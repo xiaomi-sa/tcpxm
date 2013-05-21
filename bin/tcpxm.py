@@ -37,7 +37,7 @@ TIME_LIMIT = 60
 netdev = None
 filter_str = None
 backend_ip = None
-DEBUG = False
+DEBUG = True
 
 
 def decode_ip_packet(s):
@@ -344,7 +344,7 @@ if __name__ == '__main__':
         sys.exit(1) 
 
     #lock pid file for single instance
-    fd = open('../conf/tcpxm.pid', 'w')
+    fd = open('tcpxm.pid', 'w')
     if not fd:
         print >>sys.stderr, "read tcpxm.pid faild"
         sys.exit(0)

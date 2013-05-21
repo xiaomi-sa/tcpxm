@@ -1,4 +1,4 @@
 #!/bin/bash
-num=`sudo cat ../conf/tcpxm.pid`
+num=`sudo cat tcpxm.pid`
 sudo kill -9 $num
 

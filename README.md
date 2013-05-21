@@ -21,16 +21,22 @@ Login Time = t6（发送<success\>的时间） - t0(收到SYN的时间)  + rtt(�
 git clone git://github.com/xiaomi-sa/tcpxm.git
 
 #安装pylibcap
-cd tcpxm/lib/pylibpcap-0.6.4 && python setup.py
+cd tcpxm/lib/pylibpcap-0.6.4 && sudo python setup.py install
 ```
 
 ### 启动
-`./tcpxm.py -i eth0 -f "port 80 and not host ip1 and not host ip2“`
+`sudo ./tcpxm.py -i eth0 -f "port 80 and not host ip1 and not host ip2“`
 具体filter参考pcap `man 7 pcap-filter`
 
-### 注意
-* 修改tcpxm.py中`DEBUG = True`，开始调试模式
-* 启动tcpxm `./tcpxm.py -i eth0 -f "port 80“` ，并启动一个简单的web server(twisted自带web server)，访问http页面。
+## 测试
+因为还没有做成可配置，所以代码里面是抓取米聊login时间，匹配到`<success/>`后完成一次tcp请求的记录。
+
+测试时，可以修改成DEBUG模式，它匹配到`Content-Type`，完成一次记录
+
+### 步骤
+1. 修改tcpxm.py中`DEBUG = True`
+1. 启动一个简单的twisted web, `sudo twistd web --path=/home/work/tcpxm/ -p 80`, 在浏览器中使用ip访问本机80端口，默认会展现tcpxm/index.html
+1. 启动tcpxm `sudo ./tcpxm.py -i eth0 -f "port 80“` ，访问http页面，查看log/日志记录
 
 抓包本地http 80的 tcp访问
 
