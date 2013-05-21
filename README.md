@@ -18,7 +18,7 @@ Login Time = t6（发送<success\>的时间） - t0(收到SYN的时间)  + rtt(�
 
 ### 安装
 ```
-git clone git@github.com:xiaomi-sa/tcpxm.git
+git clone git://github.com/xiaomi-sa/tcpxm.git
 
 #安装pylibcap
 cd tcpxm/lib/pylibpcap-0.6.4 && python setup.py
